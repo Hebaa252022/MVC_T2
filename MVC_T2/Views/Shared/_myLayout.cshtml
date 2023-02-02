@@ -1,0 +1,72 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVC_T</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LectureDemo.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CompanySD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PROJECTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">EMPLOYEES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SUPERVISORS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DEPARTMENTS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="py-5 mx-3 d-flex flex-nowrap justify-content-between">
+          <div class ="w-auto p-4 border-end">
+            <aside >
+                <ul class="text-decoration-none list-unstyled">
+                    <h5><li>Departments</li></h5>
+                    <h5><li>Projects</li></h5>
+                    <h5><li>Dependant</li></h5>
+                    <h5> <li>Employees</li></h5>
+                
+
+                </ul>
+            </aside>
+        </div>
+        <div class="w-75">
+            @RenderBody()
+        </div>
+    </div>
+    <footer class="border-top footer text-muted bg-light p-3">
+        <div class="container ">
+            &copy; 2023 - MVC_T2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">CompanySD</a>
+        </div>
+    </footer>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

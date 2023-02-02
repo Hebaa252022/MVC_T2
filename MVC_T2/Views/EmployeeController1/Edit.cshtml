@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+<h3>Edit Employee</h3>
+
+<form action="/EmployeeController1/EditEmployeeDb">
+    <input id="SSN" name="SSN" value="@Model.SSN" hidden />
+    <label>FName</label>
+    <input id="fname" name="fname" type="text" value="@Model.Fname" />
+    <br />
+    <br />
+    <label>LName</label>
+    <input id="lname" name="lname" type="text" value="@Model.Lname" />
+    <br />
+    <br />
+    <label>Minit</label>
+    <input id="minit" name="minit" type="text" value="@Model.Minit" />
+    <br />
+    <br />
+    <label>Gender</label>
+    <input id="Sex" name="Sex" type="text" value="@Model.Sex" />
+    <br />
+    <br />
+    <label>Address</label>
+    <input id="address" name="address" type="text" value="@Model.Address" />
+    <br />
+    <br />
+    <label>Salary</label>
+    <input id="salary" name="salary" type="number" value="@Model.Salary" />
+    <br />
+    <br />
+    <label>Birth Date</label>
+    <input id="BirthDate" name="BirthDate" type="date" value="@Model.BirthDate" />
+    <br />
+    <br />
+    <select id="SupervisorSSN" name="SupervisorSSN">
+        @foreach (var emp in ViewBag.em)
+        {
+           @if (Model.Supervisor.SSN != null)
+            {
+                @if (emp.SSN == Model.Supervisor.SSN)
+                {
+                    <option value="@emp.SSN" selected>@(emp.Fname + " " + emp.Lname)</option>
+                }
+                else
+                {
+                    <option value="@emp.SSN">@(emp.Fname + " " + emp.Lname)</option>
+                }
+
+            }
+           
+        }
+    </select>
+
+    <input type="submit" value="Edit" />
+</form>
